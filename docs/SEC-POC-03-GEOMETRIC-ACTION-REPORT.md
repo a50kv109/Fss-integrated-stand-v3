@@ -41,7 +41,7 @@ All validation rules, isometry checks, set preservation invariants, composition 
 ### B. Adversarial Negative Test Battery (`ADV_GEO`)
 Five malicious or incorrect geometric operations were injected to test rejection sensitivity:
 1. **`ADV_GEO_01` (Non-isometric scaling):** Scaled x-axis by 1.5. Statuses: [Struct: `FAIL`, Dist: `NOT_RUN`, Set: `NOT_RUN`] $\to$ **REJECTED** at structural validation.
-2. **`ADV_GEO_02` (Non-bijective projection):** Collapsed $v_2$ and $v_3$ to $v_1$. Statuses: [Struct: `FAIL`, Dist: `NOT_RUN`, Set: `NOT_RUN`] $\to$ **REJECTED** at structural validation.
+2. **`ADV_GEO_02` (Non-bijective projection):** Zeroes y and z coordinates, collapsing vertex pairs ($v_1, v_2$) and ($v_3, v_4$) onto the X-axis. Statuses: [Struct: `FAIL`, Dist: `NOT_RUN`, Set: `NOT_RUN`] $\to$ **REJECTED** at structural validation.
 3. **`ADV_GEO_03` (Translation offset):** Added affine translation to the matrix. Statuses: [Struct: `PASS`, Dist: `PASS`, Set: `FAIL`] $\to$ **REJECTED** at vertex set check (shifted off origin).
 4. **`ADV_GEO_04` (Improper rotation / reflection):** Injected mirror reflection with $\det = -1.0$. Statuses: [Struct: `FAIL`, Dist: `NOT_RUN`, Set: `NOT_RUN`] $\to$ **REJECTED** at structural validation.
 5. **`ADV_GEO_05` (Asymmetric rotation):** Rotated 45° around $[1,1,1]$ (not a tetrahedral symmetry). Statuses: [Struct: `PASS`, Dist: `PASS`, Set: `FAIL`] $\to$ **REJECTED** at vertex set check.
@@ -58,6 +58,10 @@ Five malicious or incorrect geometric operations were injected to test rejection
 
 ## 5. Unverified Assumptions & Known Limitations
 
-1. **Subgroup Scope:** PoC-03 verifies a representative subset of proper tetrahedral rotations (identity, 3-fold rotations, 180° edge rotations), but does not yet cover the full 24-element octahedral group $O_h$ or space groups.
+1. **Subgroup Scope:** PoC-03 verifies a representative subset of proper tetrahedral rotations, but does not yet cover the full tetrahedral symmetry group $T_d$ (order 24) or full space groups. 
+   - Rotations of a tetrahedron (group $T$, order 12, isomorphic to $A_4$) are partially represented.
+   - Full tetrahedral symmetry group $T_d$ has order 24. 
+   - $O_h$ (order 48) is the octahedral group, distinct from tetrahedral symmetries. 
+   This PoC does not claim verification of these complete groups.
 2. **Core Untouched:** No modifications were made to `core/engine.ts` or `core/canonical.ts`.
 3. **Floating Point Tolerance:** Tolerance thresholds ($\epsilon = 10^{-4}$) assume standard IEEE 754 double-precision arithmetic.
