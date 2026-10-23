@@ -40,11 +40,11 @@ All validation rules, isometry checks, set preservation invariants, composition 
 
 ### B. Adversarial Negative Test Battery (`ADV_GEO`)
 Five malicious or incorrect geometric operations were injected to test rejection sensitivity:
-1. **`ADV_GEO_01` (Non-isometric scaling):** Scaled x-axis by 1.5. Caught by distance and set preservation checks $\to$ **REJECTED**.
-2. **`ADV_GEO_02` (Non-bijective projection):** Collapsed $v_2$ and $v_3$ to $v_1$. Caught by vertex set preservation checks $\to$ **REJECTED**.
-3. **`ADV_GEO_03` (Translation offset):** Added affine translation to the matrix. Caught by structural/set checks $\to$ **REJECTED**.
-4. **`ADV_GEO_04` (Improper rotation / reflection):** Injected mirror reflection with $\det = -1.0$. Caught by structural determinant check $\to$ **REJECTED**.
-5. **`ADV_GEO_05` (Asymmetric rotation):** Rotated 45° around $[1,1,1]$ (not a tetrahedral symmetry). Caught by vertex set preservation checks $\to$ **REJECTED**.
+1. **`ADV_GEO_01` (Non-isometric scaling):** Scaled x-axis by 1.5. Statuses: [Struct: `FAIL`, Dist: `NOT_RUN`, Set: `NOT_RUN`] $\to$ **REJECTED** at structural validation.
+2. **`ADV_GEO_02` (Non-bijective projection):** Collapsed $v_2$ and $v_3$ to $v_1$. Statuses: [Struct: `FAIL`, Dist: `NOT_RUN`, Set: `NOT_RUN`] $\to$ **REJECTED** at structural validation.
+3. **`ADV_GEO_03` (Translation offset):** Added affine translation to the matrix. Statuses: [Struct: `PASS`, Dist: `PASS`, Set: `FAIL`] $\to$ **REJECTED** at vertex set check (shifted off origin).
+4. **`ADV_GEO_04` (Improper rotation / reflection):** Injected mirror reflection with $\det = -1.0$. Statuses: [Struct: `FAIL`, Dist: `NOT_RUN`, Set: `NOT_RUN`] $\to$ **REJECTED** at structural validation.
+5. **`ADV_GEO_05` (Asymmetric rotation):** Rotated 45° around $[1,1,1]$ (not a tetrahedral symmetry). Statuses: [Struct: `PASS`, Dist: `PASS`, Set: `FAIL`] $\to$ **REJECTED** at vertex set check.
 
 ---
 

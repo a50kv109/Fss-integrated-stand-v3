@@ -388,24 +388,38 @@ export function runSecPoc03Tests() {
 
   let advPassed = 0;
   for (const adv of adversarialCases) {
-    const structCheck = validateMatrixStructure(adv.mutatedOp.matrix).valid;
-    const distCheck = structCheck ? validateDistancePreservation(adv.mutatedOp.matrix, TETRAHEDRON_VERTICES).valid : false;
-    const setCheck = structCheck && distCheck ? validateVertexSetPreservation(adv.mutatedOp.matrix, TETRAHEDRON_VERTICES) : false;
+    const structRes = validateMatrixStructure(adv.mutatedOp.matrix);
+    const structStatus = structRes.valid ? 'PASS' : 'FAIL';
 
-    const caught = !structCheck || !distCheck || !setCheck;
-    const failures: string[] = [];
-    if (!structCheck) failures.push('CHK_GEO_STRUCTURE');
-    if (!distCheck) failures.push('CHK_GEO_DISTANCE');
-    if (!setCheck) failures.push('CHK_GEO_SET');
+    let distStatus = 'NOT_RUN';
+    let distValid = false;
+    if (structRes.valid) {
+      const distRes = validateDistancePreservation(adv.mutatedOp.matrix, TETRAHEDRON_VERTICES);
+      distValid = distRes.valid;
+      distStatus = distValid ? 'PASS' : 'FAIL';
+    }
 
-    // Strict validation: Expected target must be among the failure attribution reasons
-    const correctlyCaught = caught && failures.includes(adv.expectedTarget);
+    let setStatus = 'NOT_RUN';
+    let setValid = false;
+    if (structRes.valid && distValid) {
+      setValid = validateVertexSetPreservation(adv.mutatedOp.matrix, TETRAHEDRON_VERTICES);
+      setStatus = setValid ? 'PASS' : 'FAIL';
+    }
 
-    if (correctlyCaught) {
+    let targetFailed = false;
+    if (adv.expectedTarget === 'CHK_GEO_STRUCTURE') {
+      targetFailed = structStatus === 'FAIL';
+    } else if (adv.expectedTarget === 'CHK_GEO_DISTANCE') {
+      targetFailed = distStatus === 'FAIL';
+    } else if (adv.expectedTarget === 'CHK_GEO_SET') {
+      targetFailed = setStatus === 'FAIL';
+    }
+
+    if (targetFailed) {
       advPassed++;
-      console.log(`[${adv.id}] 🛡️ PASS | Injected: ${adv.description} | Expected Target: ${adv.expectedTarget} | Caught By: [${failures.join(', ')}] | Verdict: REJECTED`);
+      console.log(`[${adv.id}] 🛡️ PASS | Injected: ${adv.description} | Expected Target: ${adv.expectedTarget} | Statuses: [Struct: ${structStatus}, Dist: ${distStatus}, Set: ${setStatus}] | Verdict: REJECTED`);
     } else {
-      console.error(`[${adv.id}] ❌ FAIL | Injected: ${adv.description} | Expected Target: ${adv.expectedTarget} not in failures [${failures.join(', ')}]`);
+      console.error(`[${adv.id}] ❌ FAIL | Injected: ${adv.description} | Expected Target: ${adv.expectedTarget} did not fail | Statuses: [Struct: ${structStatus}, Dist: ${distStatus}, Set: ${setStatus}]`);
     }
   }
 
