@@ -1,0 +1,961 @@
+{
+  "manifest": {
+    "schemaId": "https://fss.local/schemas/crystallographic-exchange-v1.json",
+    "schemaVersion": "1.0.0",
+    "sourceName": "Gemmi",
+    "sourceRepository": "https://github.com/project-gemmi/gemmi",
+    "sourceCommit": "5cc1c23c6007e0e6cbd69289c6f7c0bff50e943e",
+    "sourceVersion": "v0.7.5",
+    "tablePath": "src/symmetry.cpp:spacegroup_tables::main",
+    "license": "MPL-2.0",
+    "attribution": "International Tables for Crystallography (ITA)",
+    "extractorVersion": "1.0.0",
+    "recordCount": 8,
+    "sha256Checksum": "f1ee084b36c8fb658a62de117347a1a414b723709de8f60d0abc8e14ee4eec36",
+    "isSourceVerified": true
+  },
+  "records": [
+    {
+      "spaceGroupNumber": 1,
+      "settingId": "P1",
+      "hmSymbol": "P 1",
+      "hallSymbol": "P 1",
+      "crystalSystem": "triclinic",
+      "centering": "P",
+      "operationsCount": 1,
+      "operations": [
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x,y,z"
+        }
+      ],
+      "provenance": {
+        "sourceName": "Gemmi",
+        "sourceRepository": "https://github.com/project-gemmi/gemmi",
+        "sourceCommit": "5cc1c23c6007e0e6cbd69289c6f7c0bff50e943e",
+        "tablePath": "src/symmetry.cpp:spacegroup_tables::main",
+        "license": "MPL-2.0",
+        "attribution": "International Tables for Crystallography (ITA)",
+        "isVerified": true
+      }
+    },
+    {
+      "spaceGroupNumber": 2,
+      "settingId": "P-1",
+      "hmSymbol": "P -1",
+      "hallSymbol": "-P 1",
+      "crystalSystem": "triclinic",
+      "centering": "P",
+      "operationsCount": 2,
+      "operations": [
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x,y,z"
+        },
+        {
+          "W": [
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "-x,-y,-z"
+        }
+      ],
+      "provenance": {
+        "sourceName": "Gemmi",
+        "sourceRepository": "https://github.com/project-gemmi/gemmi",
+        "sourceCommit": "5cc1c23c6007e0e6cbd69289c6f7c0bff50e943e",
+        "tablePath": "src/symmetry.cpp:spacegroup_tables::main",
+        "license": "MPL-2.0",
+        "attribution": "International Tables for Crystallography (ITA)",
+        "isVerified": true
+      }
+    },
+    {
+      "spaceGroupNumber": 3,
+      "settingId": "P2",
+      "hmSymbol": "P 1 2 1",
+      "hallSymbol": "P 2y",
+      "crystalSystem": "monoclinic",
+      "centering": "P",
+      "operationsCount": 2,
+      "operations": [
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x,y,z"
+        },
+        {
+          "W": [
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "-x,y,-z"
+        }
+      ],
+      "provenance": {
+        "sourceName": "Gemmi",
+        "sourceRepository": "https://github.com/project-gemmi/gemmi",
+        "sourceCommit": "5cc1c23c6007e0e6cbd69289c6f7c0bff50e943e",
+        "tablePath": "src/symmetry.cpp:spacegroup_tables::main",
+        "license": "MPL-2.0",
+        "attribution": "International Tables for Crystallography (ITA)",
+        "isVerified": true
+      }
+    },
+    {
+      "spaceGroupNumber": 4,
+      "settingId": "P21",
+      "hmSymbol": "P 1 21 1",
+      "hallSymbol": "P 2yb",
+      "crystalSystem": "monoclinic",
+      "centering": "P",
+      "operationsCount": 2,
+      "operations": [
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x,y,z"
+        },
+        {
+          "W": [
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "-x,y+1/2,-z"
+        }
+      ],
+      "provenance": {
+        "sourceName": "Gemmi",
+        "sourceRepository": "https://github.com/project-gemmi/gemmi",
+        "sourceCommit": "5cc1c23c6007e0e6cbd69289c6f7c0bff50e943e",
+        "tablePath": "src/symmetry.cpp:spacegroup_tables::main",
+        "license": "MPL-2.0",
+        "attribution": "International Tables for Crystallography (ITA)",
+        "isVerified": true
+      }
+    },
+    {
+      "spaceGroupNumber": 5,
+      "settingId": "C2",
+      "hmSymbol": "C 1 2 1",
+      "hallSymbol": "C 2y",
+      "crystalSystem": "monoclinic",
+      "centering": "C",
+      "operationsCount": 4,
+      "operations": [
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x,y,z"
+        },
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x+1/2,y+1/2,z"
+        },
+        {
+          "W": [
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "-x,y,-z"
+        },
+        {
+          "W": [
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "-x+1/2,y+1/2,-z"
+        }
+      ],
+      "provenance": {
+        "sourceName": "Gemmi",
+        "sourceRepository": "https://github.com/project-gemmi/gemmi",
+        "sourceCommit": "5cc1c23c6007e0e6cbd69289c6f7c0bff50e943e",
+        "tablePath": "src/symmetry.cpp:spacegroup_tables::main",
+        "license": "MPL-2.0",
+        "attribution": "International Tables for Crystallography (ITA)",
+        "isVerified": true
+      }
+    },
+    {
+      "spaceGroupNumber": 9,
+      "settingId": "Cc",
+      "hmSymbol": "C 1 c 1",
+      "hallSymbol": "C -2yc",
+      "crystalSystem": "monoclinic",
+      "centering": "C",
+      "operationsCount": 4,
+      "operations": [
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x,y,z"
+        },
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x+1/2,y+1/2,z"
+        },
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            }
+          ],
+          "triplet": "x,-y,z+1/2"
+        },
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            }
+          ],
+          "triplet": "x+1/2,-y+1/2,z+1/2"
+        }
+      ],
+      "provenance": {
+        "sourceName": "Gemmi",
+        "sourceRepository": "https://github.com/project-gemmi/gemmi",
+        "sourceCommit": "5cc1c23c6007e0e6cbd69289c6f7c0bff50e943e",
+        "tablePath": "src/symmetry.cpp:spacegroup_tables::main",
+        "license": "MPL-2.0",
+        "attribution": "International Tables for Crystallography (ITA)",
+        "isVerified": true
+      }
+    },
+    {
+      "spaceGroupNumber": 14,
+      "settingId": "P21/c",
+      "hmSymbol": "P 1 21/c 1",
+      "hallSymbol": "-P 2ybc",
+      "crystalSystem": "monoclinic",
+      "centering": "P",
+      "operationsCount": 4,
+      "operations": [
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x,y,z"
+        },
+        {
+          "W": [
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            }
+          ],
+          "triplet": "-x,y+1/2,-z+1/2"
+        },
+        {
+          "W": [
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "-x,-y,-z"
+        },
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            }
+          ],
+          "triplet": "x,-y+1/2,z+1/2"
+        }
+      ],
+      "provenance": {
+        "sourceName": "Gemmi",
+        "sourceRepository": "https://github.com/project-gemmi/gemmi",
+        "sourceCommit": "5cc1c23c6007e0e6cbd69289c6f7c0bff50e943e",
+        "tablePath": "src/symmetry.cpp:spacegroup_tables::main",
+        "license": "MPL-2.0",
+        "attribution": "International Tables for Crystallography (ITA)",
+        "isVerified": true
+      }
+    },
+    {
+      "spaceGroupNumber": 19,
+      "settingId": "P212121",
+      "hmSymbol": "P 21 21 21",
+      "hallSymbol": "P 2ac 2ab",
+      "crystalSystem": "orthorhombic",
+      "centering": "P",
+      "operationsCount": 4,
+      "operations": [
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x,y,z"
+        },
+        {
+          "W": [
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            }
+          ],
+          "triplet": "-x+1/2,-y,z+1/2"
+        },
+        {
+          "W": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "triplet": "x+1/2,-y+1/2,-z"
+        },
+        {
+          "W": [
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              -1
+            ]
+          ],
+          "w": [
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            },
+            {
+              "numerator": 1,
+              "denominator": 2
+            }
+          ],
+          "triplet": "-x,y+1/2,-z+1/2"
+        }
+      ],
+      "provenance": {
+        "sourceName": "Gemmi",
+        "sourceRepository": "https://github.com/project-gemmi/gemmi",
+        "sourceCommit": "5cc1c23c6007e0e6cbd69289c6f7c0bff50e943e",
+        "tablePath": "src/symmetry.cpp:spacegroup_tables::main",
+        "license": "MPL-2.0",
+        "attribution": "International Tables for Crystallography (ITA)",
+        "isVerified": true
+      }
+    }
+  ]
+}

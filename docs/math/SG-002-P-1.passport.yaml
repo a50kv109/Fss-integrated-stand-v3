@@ -1,0 +1,53 @@
+schema_version: "1.0"
+group_id: 2
+hm_symbol: "P -1"
+hall_symbol: "-P 1"
+setting_id: "P-1"
+crystal_system: "triclinic"
+
+mode: "implementation-linked"
+
+provenance:
+  source_artifact: "data/crystallography/gemmi_benchmark_4.json"
+  source_library: "Gemmi"
+  source_commit: "5cc1c23c"
+  checksum_sha256: "f1ee084b..."
+
+registry_reference:
+  module: "core/registry.ts"
+  registry_entry_key: "P-1"
+
+mathematical_claims:
+  - id: "inv_matrix"
+    description: "Inversion operation matrix equals negative identity (-I)"
+    formula: "W = -I"
+    verification_contract_id: "VC-INV-01"
+
+  - id: "center_midpoint"
+    description: "Inversion center midpoint formula for affine point mapping"
+    formula: "c = w / 2"
+    verification_contract_id: "VC-INV-02"
+
+verification_contracts:
+  - id: "VC-INV-01"
+    target_function: "AffineOperationAlgebra.isInversion"
+    test_file: "core/group_properties.test.ts"
+    assertion_type: "exact_matrix_equality"
+
+  - id: "VC-INV-02"
+    target_function: "CrystallographicGroupProperties.analyzeCentrosymmetry"
+    test_file: "core/group_properties.test.ts"
+    assertion_type: "exact_rational_midpoint"
+
+visualization_binding:
+  example_target: "SG-002"
+  render_primitives:
+    - type: "point"
+      role: "inversion_center"
+      coordinates_source: "computed_center"
+    - type: "segment"
+      role: "point_mapping"
+      endpoints_source: ["input_point_P", "transformed_point_P_prime"]
+
+limitations:
+  - "Coordinate system dependence of center 'c' under origin shifts."

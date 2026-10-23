@@ -1,0 +1,8 @@
+{
+  "name": "Remix Fss-integrated-stand-grok 2",
+  "description": "A quantum-grade crystallographic explorer integrating Fedorov\u0027s 230 space groups with Sasha\u0027s Harmonic Resonance Module (SHRM) for frequency-based symmetry analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
