@@ -331,7 +331,7 @@ export function runSecPoc03Tests() {
     },
     {
       id: 'ADV_GEO_02',
-      description: 'Non-bijective projection matrix (collapsing v2 and v3 to v1)',
+      description: 'Zeroes y and z coordinates, collapsing vertex pairs (v1, v2) and (v3, v4) onto the X-axis',
       expectedTarget: 'CHK_GEO_STRUCTURE',
       mutatedOp: {
         id: 'mut_project',
