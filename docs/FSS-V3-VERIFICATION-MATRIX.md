@@ -13,7 +13,7 @@ This matrix catalogs the verification status, test suites, execution commands, a
 | `core/sec_poc02_s3.test.ts` | SEC PoC-02 ($S_3$ Group) | Non-abelian composition ($ab \neq ba$), complete Cayley table consistency, inverse existence, associativity. | `npx tsx core/sec_poc02_s3.test.ts` | **PASS** | [`SEC-POC-02-S3-REPORT.md`](SEC-POC-02-S3-REPORT.md) |
 | `core/sec_poc03_geometry.test.ts` | SEC PoC-03 (Tetrahedron) | Rigid spatial transformations on $V_4$, Euclidean distance preservation ($\epsilon = 10^{-4}$), vertex permutations (geometric-action subset test, without group closure assumptions). | `npx tsx core/sec_poc03_geometry.test.ts` | **PASS** | [`SEC-POC-03-GEOMETRIC-ACTION-REPORT.md`](SEC-POC-03-GEOMETRIC-ACTION-REPORT.md) |
 | TypeScript Compiler | Static Type Checking (`tsc`) | Full type correctness across core modules, tests, and UI components. | `npx tsc --noEmit` | **PASS** | Build logs |
-| Linter | Code Linting (`eslint`) | Code style, syntax rules, and import correctness. | `npm run lint` | **PASS** | Linter output |
+| TypeScript Type Checker | Type Checking (`tsc`) | Static type correctness across core modules, tests, and UI components (`npm run lint` executes `tsc --noEmit`). | `npm run lint` | **PASS** | Type check logs |
 | Production Bundler | Vite Build (`vite build`) | Production asset compilation and bundling. | `npm run build` | **PASS** | `dist/` bundle output |
 
 ---

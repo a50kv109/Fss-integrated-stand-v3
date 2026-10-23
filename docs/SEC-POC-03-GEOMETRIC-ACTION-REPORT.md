@@ -26,8 +26,7 @@ All validation rules, isometry checks, set preservation invariants, composition 
 3. **Distance Preservation / Isometry (`CHK_GEO_DISTANCE`):** Verifies that for every operation $M$ and every pair of vertices $(v_i, v_j)$, the Euclidean distance is strictly preserved:
    $$\|M v_i - M v_j\| = \|v_i - v_j\| \quad (\text{tolerance } \epsilon = 10^{-4})$$
 4. **Vertex Set Preservation (`CHK_GEO_SET`):** Verifies that the transformed vertex set $\{M v_1, M v_2, M v_3, M v_4\}$ equals the original vertex set $\{v_1, v_2, v_3, v_4\}$ as a point set (bijective mapping with no vertex collisions).
-5. **Composition Consistency / Homomorphism (`CHK_GEO_HOMOMORPHISM`):** Verifies that matrix multiplication corresponds exactly to function composition on spatial vertices:
-   $$(M_1 M_2) v = M_1 (M_2 v)$$
+5. **Action Composition Consistency (`CHK_GEO_ACTION_COMPATIBILITY`):** Verifies matrix-action consistency $(M_1 M_2)v = M_1 (M_2 v)$ across the 5-operation subset. Note: This validates spatial operator compatibility, **not** full group closure under multiplication (as compositions such as $R_x R_y = R_z$ fall outside the 5-operation subset), nor does it claim a general group homomorphism.
 
 ---
 
@@ -37,7 +36,7 @@ All validation rules, isometry checks, set preservation invariants, composition 
 - **`CHK_GEO_STRUCTURE`:** ✅ PASSED (All 5 reference operations verified for dimensions, orthogonality, and $\det = +1.0$).
 - **`CHK_GEO_DISTANCE`:** ✅ PASSED (All inter-vertex Euclidean distances preserved across all operations).
 - **`CHK_GEO_SET`:** ✅ PASSED (All operations bijectively permute the vertex set $V_4$).
-- **`CHK_GEO_HOMOMORPHISM`:** ✅ PASSED (Composition consistency holds across all operation pairs and vertices).
+- **`CHK_GEO_ACTION_COMPATIBILITY`:** ✅ PASSED (Action composition consistency holds across all operation pairs and vertices).
 
 ### B. Adversarial Negative Test Battery (`ADV_GEO`)
 Five malicious or incorrect geometric operations were injected to test rejection sensitivity:

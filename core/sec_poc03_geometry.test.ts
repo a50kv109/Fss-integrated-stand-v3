@@ -317,7 +317,7 @@ export function runSecPoc03Tests() {
     {
       id: 'ADV_GEO_01',
       description: 'Non-isometric linear scaling (scale x by 1.5)',
-      expectedTarget: 'CHK_GEO_DISTANCE',
+      expectedTarget: 'CHK_GEO_STRUCTURE',
       mutatedOp: {
         id: 'mut_scale',
         name: 'Non-isometric scale',
@@ -332,7 +332,7 @@ export function runSecPoc03Tests() {
     {
       id: 'ADV_GEO_02',
       description: 'Non-bijective projection matrix (collapsing v2 and v3 to v1)',
-      expectedTarget: 'CHK_GEO_SET',
+      expectedTarget: 'CHK_GEO_STRUCTURE',
       mutatedOp: {
         id: 'mut_project',
         name: 'Projection matrix',
@@ -347,7 +347,7 @@ export function runSecPoc03Tests() {
     {
       id: 'ADV_GEO_03',
       description: 'Translation offset added (shifting tetrahedron off origin)',
-      expectedTarget: 'CHK_GEO_STRUCTURE',
+      expectedTarget: 'CHK_GEO_SET',
       mutatedOp: {
         id: 'mut_translate',
         name: 'Translation offset',
@@ -398,11 +398,14 @@ export function runSecPoc03Tests() {
     if (!distCheck) failures.push('CHK_GEO_DISTANCE');
     if (!setCheck) failures.push('CHK_GEO_SET');
 
-    if (caught) {
+    // Strict validation: Expected target must be among the failure attribution reasons
+    const correctlyCaught = caught && failures.includes(adv.expectedTarget);
+
+    if (correctlyCaught) {
       advPassed++;
       console.log(`[${adv.id}] 🛡️ PASS | Injected: ${adv.description} | Expected Target: ${adv.expectedTarget} | Caught By: [${failures.join(', ')}] | Verdict: REJECTED`);
     } else {
-      console.log(`[${adv.id}] `);
+      console.error(`[${adv.id}] ❌ FAIL | Injected: ${adv.description} | Expected Target: ${adv.expectedTarget} not in failures [${failures.join(', ')}]`);
     }
   }
 
