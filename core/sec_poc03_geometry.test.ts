@@ -290,14 +290,14 @@ export function runSecPoc03Tests() {
     console.log('[CHK_GEO_SET] ❌ FAIL');
   }
 
-  // 4. Composition Consistency (Homomorphism)
+  // 4. Action Composition Consistency (Subset Test - No Group Closure Assumed)
   totalChecks++;
   const homomorphic = validateCompositionConsistency(REF_GEO_OPERATIONS, TETRAHEDRON_VERTICES);
   if (homomorphic) {
     passedChecks++;
-    console.log('[CHK_GEO_HOMOMORPHISM] ✅ Verify composition consistency (M1*M2)(v) == M1(M2(v)) -> PASS');
+    console.log('[CHK_GEO_ACTION_COMPATIBILITY] ✅ Verify action composition consistency (M1*M2)(v) == M1(M2(v)) across operation subset -> PASS');
   } else {
-    console.log('[CHK_GEO_HOMOMORPHISM] ❌ FAIL');
+    console.log('[CHK_GEO_ACTION_COMPATIBILITY] ❌ FAIL');
   }
 
   console.log(`Positive Baseline Verdict: ${passedChecks === totalChecks ? 'VERIFIED' : 'FAILED'}`);
@@ -413,10 +413,10 @@ export function runSecPoc03Tests() {
 
   if (passedChecks === totalChecks && advPassed === adversarialCases.length) {
     console.log('SEC PoC-03 GEOMETRIC ACTION VERIFICATION: ALL TESTS PASSED SUCCESSFULLY ✅');
-    return true;
+    process.exit(0);
   } else {
     console.error('SEC PoC-03 GEOMETRIC ACTION VERIFICATION: TEST SUITE FAILED ❌');
-    return false;
+    process.exit(1);
   }
 }
 

@@ -20,7 +20,7 @@
 - **Screw Axis Relation**: Intended relation is $g^4 = T_{(0,0,1)}$ along $[0,0,1]$.
 - **Internal Consistency**: Verified via script and unit test assertions (identity, closure, inverse, self-matching). Status: `INTERNAL_CONSISTENCY_CHECKED`.
 - **Independent Mathematical Verification**: An independent reference check or external derivation has not yet been completed in this environment. Status: `PENDING`.
-- **Registration Report**: Detailed evidence ledger and validation notes can be found in `/docs/analysis/SG_076_P41_REGISTRATION_REPORT.md`.
+- **Registration Report**: Detailed evidence ledger and validation notes can be found in [docs/analysis/SG_076_P41_REGISTRATION_REPORT.md](docs/analysis/SG_076_P41_REGISTRATION_REPORT.md).
 
 ## 4. Status Dimensions
 - **Protocol Stage**: 8. ACCEPT & DOCUMENT
@@ -30,4 +30,4 @@
 - **Independent Mathematical Verification Status**: `PENDING`
 - **Registration Status**: `REGISTERED` (Present in `core/registry.ts`)
 - **Integration Status**: `INTEGRATION_VERIFIED` (Unit tested in `core/registry.test.ts` and verified via internal consistency script)
-- **Reference**: Follows [SG-IMPORT-PROTOCOL.md](/docs/SG-IMPORT-PROTOCOL.md)
+- **Reference**: Follows [SG-IMPORT-PROTOCOL.md](docs/SG-IMPORT-PROTOCOL.md)
